@@ -1,0 +1,54 @@
+body{
+  font-family: sans-serif; /*para que todo tenga un mismo tipo de letra*/
+
+}
+nav{ /*etiqueta de bloque entonces deberia cambiar aqui sus tamaños
+  outline:1px solid green;*/
+  width: 20%;
+}
+/*debemos sacar los estilos predefinidos de las listas y los hipervinculos*/
+ul{
+  /*outline:1px solid yellow; /*paraver el ancho y alto de esta etiqueta*/
+list-style: none; /*quitar las viñetas*/
+margin: 0; /*para sacar los margenes por defecto*/
+padding: 0; /*lo mismo*/
+/*width: 20%;lo muevo hacia arriba a mi nav para que este semanticamente correcto*/
+line-height: 30px; /*ancho de la linea*/
+}
+li{
+  /*outline:1px solid red;*/
+  background-color:  #d5dbdb ;
+}
+
+a{
+  /*outline:1px solid green;*/
+  /*como es un hipervinculo de tipo inline solo esta el contenido en el texto*/
+  /*debo cambiar el display a blque*/
+  display: block; /*ahora contiene el ancho de la etiqueta padre*/
+  text-decoration: none; /*sacar el subrayado predeterminado del hipervinculo*/
+  color: black;
+  padding-left: 10px; /*para darle espacio */
+
+}
+/*estados de los enlaces LoVe/HAte link Visited Hover Active
+hover cuando pasamos con el mouse
+active mientras le doy click*/
+a:hover{ /*para que cambie el color cuando paso por el mouse*/
+  background-color: #aeb6bf;
+}
+a:active{
+  background: #566573;
+  color: white;
+}
+ul li:nth-child(1){ /*ul li:first-child para seleccionar el primer hijo*/
+  background-color: orange;
+}
+ul li:nth-child(1) a{ /*quiero a la etiqueta a que se encuentra dentro de li que es primer hijo de ul*/
+  color: white;
+}
+ul li:first-child a:hover{
+  color: black;
+}
+ul li:first-child a:active{
+  color: white;
+}
